@@ -106,16 +106,16 @@ GROUP BY ven_id";
                             </td>
                         </tr>
                         <tr bgcolor="#6FC8C0">
-                            <td align="center" colspan="2">
-                                <img src="image/total.jpg" width="30" >
+                            <td align="left" colspan="2">
+                                <img src="image/total.jpg" width="130px" >
                             </td>
                             <td width="50" align="center">
                                 <?php echo $value['total'].'%'; ?>
                             </td>
                         </tr>
                         <tr bgcolor="#adff2f">
-                            <td align="center" colspan="2">
-                                <img src="image/ranking.jpg" width="30" >
+                            <td align="left" colspan="2">
+                                <img src="image/ranking.jpg" width="130px" >
                             </td>
 
                             <td width="50" align="center">
