@@ -49,7 +49,7 @@ GROUP BY ven_id";
             <div class="col-md-3">
             </div>
             <div class="col-md-1">
-                <img src="image/commentator<?php echo $value['ven_id']; ?>.jpg" width="80" >
+                <a href="view.php?id=<?php echo $value['ven_id']; ?>"><img src="image/commentator<?php echo $value['ven_id']; ?>.jpg" width="80" ></a>
             </div>
             <!-- Commentator 1
             ================================================== -->
@@ -112,7 +112,7 @@ GROUP BY ven_id";
                             <td>Total
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['total']; ?>
+                                <?php echo $value['total'].'%'; ?>
                             </td>
                         </tr>
                         <tr bgcolor="#adff2f">
