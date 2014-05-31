@@ -39,11 +39,11 @@ if ( isset($_POST['button']) AND $_POST['button'] == 'Submit' ) {
 <?php include('head.php'); ?>
 </head>
 <body>
-	<div style="margin:auto;width:960px">
+<div class="container">
+	<div style="margin:auto;width:960px;padding-bottom:50px">
 		<img src="image/header.jpg" />
 	</div>
-<br>
-<div class="container">
+
 	<?php include("each_speaker.php");
 	
 	$sql = "SELECT * FROM `raj_ventriloquist` ORDER BY `raj_ventriloquist`.`ven_id` ASC"; 
@@ -52,6 +52,7 @@ if ( isset($_POST['button']) AND $_POST['button'] == 'Submit' ) {
 		render_each_speaker($res);
 	endwhile;
 	?>
+	<a href="result.php" style="text-align:center;" > <h1>ไปหน้า ผลการโหวด </h1></a>
 </div>
 </body>
 </html>
