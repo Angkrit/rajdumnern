@@ -12,7 +12,7 @@ $link = connectDB();
     $pc_id = $array['pc_id']+1;
 
     $strSQL = "";
-    $strSQL = "SELECT ven_id,
+    $strSQL = "SELECT v.ven_id,v.ven_name
 TRUNCATE(AVG(pc_speaking_point)/4*100,2) as speaking,
 TRUNCATE(AVG(pc_knowledge_point)/4*100,2) as knowledge,
 TRUNCATE(AVG(pc_entertainment_point)/4*100,2) as entertainment,
@@ -22,7 +22,8 @@ TRUNCATE((TRUNCATE(AVG(pc_speaking_point)/4*100,2) + TRUNCATE(AVG(pc_knowledge_p
 TRUNCATE(AVG(pc_entertainment_point)/4*100,2) +
 TRUNCATE(AVG(pc_accuracy_point)/4*100,2))/4,2) as total
 
-FROM raj_point_comment
+FROM raj_point_comment pc
+INNER JOIN raj_ventriloquist v ON pc.ven_id = v.ven_id
 GROUP BY ven_id";
 
     $objQuery = mysql_query($strSQL,$link);
@@ -56,6 +57,11 @@ GROUP BY ven_id";
                 <form name="form1" method="post" action="index.php" >
                     <input name="ven_id" type="hidden" size="10" value="1" />
                     <table width="100%" border="0">
+                        <tr>
+                            <td colspan="2" align="center">
+                                <?php echo $value['ven_name']; ?>
+                            </td>
+                        </tr>
                         <tr bgcolor="#EC1C24">
                             <td width="50" align="center">
                                 <img src="image/skill1.png" width="30" >
@@ -89,7 +95,7 @@ GROUP BY ven_id";
                             </td>
 
                         </tr>
-                        <tr bgcolor="#6FC8C0">
+                        <tr bgcolor="white">
                             <td align="center">
                                 <img src="image/skill4.png" width="30" >
                             </td>
@@ -99,7 +105,7 @@ GROUP BY ven_id";
                                 <?php echo $value['accuracy']; ?>
                             </td>
                         </tr>
-                        <tr bgcolor="white">
+                        <tr bgcolor="#6FC8C0">
                             <td align="center">
                                 <img src="image/skill4.png" width="30" >
                             </td>
