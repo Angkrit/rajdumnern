@@ -39,6 +39,9 @@ if ( isset($_POST['button']) AND $_POST['button'] == 'Submit' ) {
 <?php include('head.php'); ?>
 </head>
 <body>
+	<div style="margin:auto;width:960px">
+		<img src="image/header.jpg" />
+	</div>
 <br>
 <div class="container">
 	<?php include("each_speaker.php");
