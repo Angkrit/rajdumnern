@@ -3,7 +3,10 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-1">
+            <div style="padding:5px 5px 10px 0px">
             <img src="image/commentator<?php echo $data['ven_id']?>.jpg" width="80" >
+            </div> 
+            <div class="fb-like" data-href="http://128.199.230.16/rajdumnern/view.php?id=<?php echo $data['ven_id']?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
         </div>
         <!-- Commentator 1
         ================================================== --> 
