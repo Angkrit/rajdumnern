@@ -42,36 +42,12 @@ GROUP BY ven_id";
 <br>
 <div class="container">
 <div class="row">
-    <div class="col-md-3">
-    </div>
-    <div class="col-md-1">
-        <table>
-            <tr>
-                <td>
-                    Commentator
-                </td>
-                <td>
-                    Speaking Skill
-                </td>
-                <td>
-                    Soccer Knowledge
-                </td>
-                <td>
-                    Entertainment Skill
-                </td>
-                <td>
-                    Accuracy Skill
-                </td>
-                <td>
-                    Total
-                </td>
-                <td>
-                    Rank
-                </td>
-            </tr>
+
         <?php
         while($value = mysql_fetch_array($objQuery)){
         ?>
+            <div class="col-md-3">
+            </div>
             <div class="row">
                 <div class="col-md-3">
                 </div>
@@ -107,7 +83,8 @@ GROUP BY ven_id";
                     </tr>
                 </table>
             </div>
-
+            <div class="col-md-3">
+            </div>
 
 
 <!--           <tr>-->
