@@ -48,7 +48,7 @@ GROUP BY ven_id";
             <div class="col-md-3">
             </div>
             <div class="col-md-1">
-                <img src="image/commentator1.jpg" width="80" >
+                <img src="image/commentator<?php echo $value['ven_id']; ?>.jpg" width="80" >
             </div>
             <!-- Commentator 1
             ================================================== -->
@@ -96,20 +96,20 @@ GROUP BY ven_id";
                             <td>Accuracy Skill
                             </td>
                             <td width="50" align="center">
-                                <?php //echo $value['accuracy']; ?>
+                                <?php echo $value['accuracy']; ?>
                             </td>
                         </tr>
-                        <tr bgcolor="#6FC8C0">
+                        <tr bgcolor="white">
                             <td align="center">
                                 <img src="image/skill4.png" width="30" >
                             </td>
                             <td>Total
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['Total']; ?>
+                                <?php echo $value['total']; ?>
                             </td>
                         </tr>
-                        <tr bgcolor="#6FC8C0">
+                        <tr bgcolor="#adff2f">
                             <td align="center">
                                 <img src="image/skill4.png" width="30" >
                             </td>
