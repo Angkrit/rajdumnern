@@ -26,4 +26,8 @@ function disconnectDB( $link) {
 }
 /* End 
 ================================================== */
+$TitleWeb = 'งืม';
+$FolderImage = '';
+$UrlPage = '';
+$FileLogo = '';
 ?>
