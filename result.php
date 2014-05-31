@@ -72,43 +72,78 @@ GROUP BY ven_id";
         <?php
         while($value = mysql_fetch_array($objQuery)){
         ?>
-           <tr>
-               <td>
-                   <h1></h1>
-               </td>
-               <td>
-                   <img width="30" src="image/commentator<?php echo $value['ven_id']; ?>.jpg">
-               </td>
-               <td>
-                   <?php echo $value['speaking']; ?>
-               </td>
-               <td>
-                   <?php echo $value['knowledge']; ?>
-               </td>
-               <td>
-                   <?php echo $value['entertainment']; ?>
-               </td>
-               <td>
-                   <?php echo $value['accuracy']; ?>
-               </td>
-               <td>
-                   <?php echo $value['total']; ?>
-               </td>
-               <td>
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-1">
+                    <img src="image/commentator<?php echo $value['ven_id']; ?>.jpg" width="80" >
+                </div>
+                <table width="100%" border="0">
+                    <tr bgcolor="#EC1C24">
+                        <td width="50" align="center">
+                            <img width="30" src="image/commentator<?php echo $value['ven_id']; ?>.jpg">
+                        </td>
+                        <td width="50" align="center">
+                            <img src="image/skill1.png" width="30" >
+                        </td>
+                        <td>Speaking Skill
+                        </td>
+                        <td>
+                            <?php echo $value['speaking']; ?>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#EC1C24">
+                        <td width="50" align="center">
+                            <img width="30" src="image/commentator<?php echo $value['ven_id']; ?>.jpg">
+                        </td>
+                        <td width="50" align="center">
+                            <img src="image/skill1.png" width="30" >
+                        </td>
+                        <td>Speaking Skill
+                        </td>
+                        <td>
+                            <?php echo $value['speaking']; ?>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+<!--           <tr>-->
+<!--               <td>-->
+<!--                   <img width="30" src="image/commentator--><?php //echo $value['ven_id']; ?><!--.jpg">-->
+<!--               </td>-->
+<!--               <td>-->
+<!--                   --><?php //echo $value['speaking']; ?>
+<!--               </td>-->
+<!--               <td>-->
+<!--                   --><?php //echo $value['knowledge']; ?>
+<!--               </td>-->
+<!--               <td>-->
+<!--                   --><?php //echo $value['entertainment']; ?>
+<!--               </td>-->
+<!--               <td>-->
+<!--                   --><?php //echo $value['accuracy']; ?>
+<!--               </td>-->
+<!--               <td>-->
+<!--                   --><?php //echo $value['total']; ?>
+<!--               </td>-->
+<!--               <td>-->
                    <?php
-                   if($value['total'] > 90)
-                       echo 'S';
-                   elseif($value['total'] > 80)
-                       echo 'A';
-                   elseif($value['total'] > 70)
-                       echo 'B';
-                   elseif($value['total'] > 60)
-                       echo 'C';
-                   else
-                       echo 'D';
-                   ?>
-               </td>
-           </tr>
+//                   if($value['total'] > 90)
+//                       echo 'S';
+//                   elseif($value['total'] > 80)
+//                       echo 'A';
+//                   elseif($value['total'] > 70)
+//                       echo 'B';
+//                   elseif($value['total'] > 60)
+//                       echo 'C';
+//                   else
+//                       echo 'D';
+//                   ?>
+<!--               </td>-->
+<!--           </tr>-->
 
 
         <?php
