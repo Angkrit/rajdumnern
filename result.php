@@ -12,6 +12,6 @@
         <title>Title</title>
     </head>
     <body>
-        <td><img src="image/result.jpg"></td>   
+        <table>  <tr><td><img src="image/result.jpg"></td> </tr>/table>
     </body>
 </html>
