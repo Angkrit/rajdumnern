@@ -195,6 +195,7 @@ disconnectDB($link);
 		================================================== --> 
 		<div class="col-md-5">
 		<form name="form2" method="post" action="index.php" >
+		<input name="ven_id" type="hidden" size="10" value="2" />
 		<table width="100%" border="0">
 			<tr bgcolor="#EC1C24">
 				<td width="50" align="center">
@@ -203,22 +204,22 @@ disconnectDB($link);
 				<td>Speaking Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -230,22 +231,22 @@ disconnectDB($link);
 				<td>Soccer Knowledge
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -257,22 +258,22 @@ disconnectDB($link);
 				<td>Entertainment Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -284,22 +285,22 @@ disconnectDB($link);
 				<td>Accuracy Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -311,13 +312,13 @@ disconnectDB($link);
 			</tr>
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
-					<textarea name="kpi" id="kpi" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
+					<textarea name="comment" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
 				</td>
 			</tr>
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
 					<br><p>
-					<button type="button" class="btn btn-danger">Submit</button>
+					<input type="submit" name="button" class="btn btn-danger" value="Submit" />
 					</p>
 				</td>
 			</tr>
@@ -327,8 +328,7 @@ disconnectDB($link);
 		<div class="col-md-3">
 		</div>
 	</div>
-	<br>
-	<div class="row">
+	<br><div class="row">
 		<div class="col-md-3">
 		</div>
 		<div class="col-md-1">
@@ -338,6 +338,7 @@ disconnectDB($link);
 		================================================== --> 
 		<div class="col-md-5">
 		<form name="form3" method="post" action="index.php" >
+		<input name="ven_id" type="hidden" size="10" value="3" />
 		<table width="100%" border="0">
 			<tr bgcolor="#EC1C24">
 				<td width="50" align="center">
@@ -346,22 +347,22 @@ disconnectDB($link);
 				<td>Speaking Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -373,22 +374,22 @@ disconnectDB($link);
 				<td>Soccer Knowledge
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -400,22 +401,22 @@ disconnectDB($link);
 				<td>Entertainment Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -427,22 +428,22 @@ disconnectDB($link);
 				<td>Accuracy Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -454,14 +455,13 @@ disconnectDB($link);
 			</tr>
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
-					<textarea name="kpi" id="kpi" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
+					<textarea name="comment" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
 				</td>
 			</tr>
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
 					<br><p>
-					
-					<button type="button" class="btn btn-danger">Submit</button>
+					<input type="submit" name="button" class="btn btn-danger" value="Submit" />
 					</p>
 				</td>
 			</tr>
@@ -471,8 +471,7 @@ disconnectDB($link);
 		<div class="col-md-3">
 		</div>
 	</div>
-	<br>
-	<div class="row">
+	<br><div class="row">
 		<div class="col-md-3">
 		</div>
 		<div class="col-md-1">
@@ -482,6 +481,7 @@ disconnectDB($link);
 		================================================== --> 
 		<div class="col-md-5">
 		<form name="form4" method="post" action="index.php" >
+		<input name="ven_id" type="hidden" size="10" value="4" />
 		<table width="100%" border="0">
 			<tr bgcolor="#EC1C24">
 				<td width="50" align="center">
@@ -490,22 +490,22 @@ disconnectDB($link);
 				<td>Speaking Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -517,22 +517,22 @@ disconnectDB($link);
 				<td>Soccer Knowledge
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -544,22 +544,22 @@ disconnectDB($link);
 				<td>Entertainment Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -571,22 +571,22 @@ disconnectDB($link);
 				<td>Accuracy Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -598,13 +598,156 @@ disconnectDB($link);
 			</tr>
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
-					<textarea name="kpi" id="kpi" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
+					<textarea name="comment" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
 				</td>
 			</tr>
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
 					<br><p>
-					<button type="button" class="btn btn-danger">Submit</button>
+					<input type="submit" name="button" class="btn btn-danger" value="Submit" />
+					</p>
+				</td>
+			</tr>
+		</table>
+		</form>
+		</div>
+		<div class="col-md-3">
+		</div>
+	</div>
+	<br><div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-1">
+			<img src="image/commentator5.jpg" width="80" >
+		</div>
+		<!-- Commentator 5
+		================================================== --> 
+		<div class="col-md-5">
+		<form name="form5" method="post" action="index.php" >
+		<input name="ven_id" type="hidden" size="10" value="5" />
+		<table width="100%" border="0">
+			<tr bgcolor="#EC1C24">
+				<td width="50" align="center">
+					<img src="image/skill1.png" width="30" >
+				</td>
+				<td>Speaking Skill
+				</td>
+				<td width="50" align="center">
+					<label><input type="radio" name="skill1" value="4" checked>
+					<img src="image/vote1.png" width="30" >
+					</label>
+				</td>
+				<td width="40" align="center">
+					<label><input type="radio" name="skill1" value="3">
+					<img src="image/vote2.png" width="15" >
+					</label>
+				</td>
+				<td width="40" align="center">
+					<label><input type="radio" name="skill1" value="2">
+					<img src="image/vote3.png" width="15" >
+					</label>
+				</td>
+				<td width="50" align="center">
+					<label><input type="radio" name="skill1" value="1">
+					<img src="image/vote4.png" width="30" >
+					</label>
+				</td>
+			</tr>
+			<tr bgcolor="#FFCA05">
+				<td align="center">
+					<img src="image/skill2.png" width="30" >
+				</td>
+				<td>Soccer Knowledge
+				</td>
+				<td width="50" align="center">
+					<label><input type="radio" name="skill2" value="4" checked>
+					<img src="image/vote1.png" width="30" >
+					</label>
+				</td>
+				<td width="40" align="center">
+					<label><input type="radio" name="skill2" value="3">
+					<img src="image/vote2.png" width="15" >
+					</label>
+				</td>
+				<td width="40" align="center">
+					<label><input type="radio" name="skill2" value="2">
+					<img src="image/vote3.png" width="15" >
+					</label>
+				</td>
+				<td width="50" align="center">
+					<label><input type="radio" name="skill2" value="1">
+					<img src="image/vote4.png" width="30" >
+					</label>
+				</td>
+			</tr>
+			<tr bgcolor="#CCCCCC">
+				<td align="center">
+					<img src="image/skill3.png" width="30" >
+				</td>
+				<td>Entertainment Skill
+				</td>
+				<td width="50" align="center">
+					<label><input type="radio" name="skill3" value="4" checked>
+					<img src="image/vote1.png" width="30" >
+					</label>
+				</td>
+				<td width="40" align="center">
+					<label><input type="radio" name="skill3" value="3">
+					<img src="image/vote2.png" width="15" >
+					</label>
+				</td>
+				<td width="40" align="center">
+					<label><input type="radio" name="skill3" value="2">
+					<img src="image/vote3.png" width="15" >
+					</label>
+				</td>
+				<td width="50" align="center">
+					<label><input type="radio" name="skill3" value="1">
+					<img src="image/vote4.png" width="30" >
+					</label>
+				</td>
+			</tr>
+			<tr bgcolor="#6FC8C0">
+				<td align="center">
+					<img src="image/skill4.png" width="30" >
+				</td>
+				<td>Accuracy Skill
+				</td>
+				<td width="50" align="center">
+					<label><input type="radio" name="skill4" value="4" checked>
+					<img src="image/vote1.png" width="30" >
+					</label>
+				</td>
+				<td width="40" align="center">
+					<label><input type="radio" name="skill4" value="3">
+					<img src="image/vote2.png" width="15" >
+					</label>
+				</td>
+				<td width="40" align="center">
+					<label><input type="radio" name="skill4" value="2">
+					<img src="image/vote3.png" width="15" >
+					</label>
+				</td>
+				<td width="50" align="center">
+					<label><input type="radio" name="skill4" value="1">
+					<img src="image/vote4.png" width="30" >
+					</label>
+				</td>
+			</tr>
+			<tr bgcolor="#6FC8C0">
+				<td colspan="6" align="center">
+					
+				</td>
+			</tr>
+			<tr bgcolor="#6FC8C0">
+				<td colspan="6" align="center">
+					<textarea name="comment" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
+				</td>
+			</tr>
+			<tr bgcolor="#6FC8C0">
+				<td colspan="6" align="center">
+					<br><p>
+					<input type="submit" name="button" class="btn btn-danger" value="Submit" />
 					</p>
 				</td>
 			</tr>
@@ -615,148 +758,6 @@ disconnectDB($link);
 		</div>
 	</div>
 	<br>
-	<div class="row">
-		<div class="col-md-3">
-		</div>
-		<div class="col-md-1">
-			<img src="image/commentator5.jpg" width="80" >
-		</div>
-		<!-- Commentator 5
-		================================================== --> 
-		<div class="col-md-5">
-		<form name="form5" method="post" action="index.php" >
-		<table width="100%" border="0">
-			<tr bgcolor="#EC1C24">
-				<td width="50" align="center">
-					<img src="image/skill1.png" width="30" >
-				</td>
-				<td>Speaking Skill
-				</td>
-				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
-					<img src="image/vote1.png" width="30" >
-					</label>
-				</td>
-				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
-					<img src="image/vote2.png" width="15" >
-					</label>
-				</td>
-				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
-					<img src="image/vote3.png" width="15" >
-					</label>
-				</td>
-				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
-					<img src="image/vote4.png" width="30" >
-					</label>
-				</td>
-			</tr>
-			<tr bgcolor="#FFCA05">
-				<td align="center">
-					<img src="image/skill2.png" width="30" >
-				</td>
-				<td>Soccer Knowledge
-				</td>
-				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
-					<img src="image/vote1.png" width="30" >
-					</label>
-				</td>
-				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
-					<img src="image/vote2.png" width="15" >
-					</label>
-				</td>
-				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
-					<img src="image/vote3.png" width="15" >
-					</label>
-				</td>
-				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
-					<img src="image/vote4.png" width="30" >
-					</label>
-				</td>
-			</tr>
-			<tr bgcolor="#CCCCCC">
-				<td align="center">
-					<img src="image/skill3.png" width="30" >
-				</td>
-				<td>Entertainment Skill
-				</td>
-				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
-					<img src="image/vote1.png" width="30" >
-					</label>
-				</td>
-				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
-					<img src="image/vote2.png" width="15" >
-					</label>
-				</td>
-				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
-					<img src="image/vote3.png" width="15" >
-					</label>
-				</td>
-				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
-					<img src="image/vote4.png" width="30" >
-					</label>
-				</td>
-			</tr>
-			<tr bgcolor="#6FC8C0">
-				<td align="center">
-					<img src="image/skill4.png" width="30" >
-				</td>
-				<td>Accuracy Skill
-				</td>
-				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
-					<img src="image/vote1.png" width="30" >
-					</label>
-				</td>
-				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
-					<img src="image/vote2.png" width="15" >
-					</label>
-				</td>
-				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
-					<img src="image/vote3.png" width="15" >
-					</label>
-				</td>
-				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
-					<img src="image/vote4.png" width="30" >
-					</label>
-				</td>
-			</tr>
-			<tr bgcolor="#6FC8C0">
-				<td colspan="6" align="center">
-					
-				</td>
-			</tr>
-			<tr bgcolor="#6FC8C0">
-				<td colspan="6" align="center">
-					<textarea name="kpi" id="kpi" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
-				</td>
-			</tr>
-			<tr bgcolor="#6FC8C0">
-				<td colspan="6" align="center">
-					<br><p>
-					<button type="button" class="btn btn-danger">Submit</button>
-					</p>
-				</td>
-			</tr>
-		</table>
-		</form>
-		</div>
-		<div class="col-md-3">
-		</div>
-	</div>
 </div>
 
 <br>
