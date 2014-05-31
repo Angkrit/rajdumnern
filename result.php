@@ -12,7 +12,7 @@ $link = connectDB();
     $pc_id = $array['pc_id']+1;
 
     $strSQL = "";
-    $strSQL = "SELECT ven_id,
+    $strSQL = "SELECT v.ven_id,v.ven_name,
 TRUNCATE(AVG(pc_speaking_point)/4*100,2) as speaking,
 TRUNCATE(AVG(pc_knowledge_point)/4*100,2) as knowledge,
 TRUNCATE(AVG(pc_entertainment_point)/4*100,2) as entertainment,
@@ -22,7 +22,8 @@ TRUNCATE((TRUNCATE(AVG(pc_speaking_point)/4*100,2) + TRUNCATE(AVG(pc_knowledge_p
 TRUNCATE(AVG(pc_entertainment_point)/4*100,2) +
 TRUNCATE(AVG(pc_accuracy_point)/4*100,2))/4,2) as total
 
-FROM raj_point_comment
+FROM raj_point_comment pc
+INNER JOIN raj_ventriloquist v ON pc.ven_id = v.ven_id
 GROUP BY ven_id";
 
     $objQuery = mysql_query($strSQL,$link);
@@ -48,7 +49,7 @@ GROUP BY ven_id";
             <div class="col-md-3">
             </div>
             <div class="col-md-1">
-                <img src="image/commentator1.jpg" width="80" >
+                <img src="image/commentator<?php echo $value['ven_id']; ?>.jpg" width="80" >
             </div>
             <!-- Commentator 1
             ================================================== -->
@@ -56,6 +57,11 @@ GROUP BY ven_id";
                 <form name="form1" method="post" action="index.php" >
                     <input name="ven_id" type="hidden" size="10" value="1" />
                     <table width="100%" border="0">
+                        <tr>
+                            <td colspan="3" align="center">
+                                <?php echo $value['ven_name'].'%'; ?>
+                            </td>
+                        </tr>
                         <tr bgcolor="#EC1C24">
                             <td width="50" align="center">
                                 <img src="image/skill1.png" width="30" >
@@ -63,7 +69,7 @@ GROUP BY ven_id";
                             <td>Speaking Skill
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['speaking']; ?>
+                                <?php echo $value['speaking'].'%'; ?>
                             </td>
 
                         </tr>
@@ -74,7 +80,7 @@ GROUP BY ven_id";
                             <td>Soccer Knowledge
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['knowledge']; ?>
+                                <?php echo $value['knowledge'].'%'; ?>
                             </td>
 
                         </tr>
@@ -85,18 +91,18 @@ GROUP BY ven_id";
                             <td>Entertainment Skill
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['entertainment']; ?>
+                                <?php echo $value['entertainment'].'%'; ?>
                             </td>
 
                         </tr>
-                        <tr bgcolor="#6FC8C0">
+                        <tr bgcolor="white">
                             <td align="center">
                                 <img src="image/skill4.png" width="30" >
                             </td>
                             <td>Accuracy Skill
                             </td>
                             <td width="50" align="center">
-                                <?php //echo $value['accuracy']; ?>
+                                <?php echo $value['accuracy'].'%'; ?>
                             </td>
                         </tr>
                         <tr bgcolor="#6FC8C0">
@@ -106,10 +112,10 @@ GROUP BY ven_id";
                             <td>Total
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['Total']; ?>
+                                <?php echo $value['total']; ?>
                             </td>
                         </tr>
-                        <tr bgcolor="#6FC8C0">
+                        <tr bgcolor="#adff2f">
                             <td align="center">
                                 <img src="image/skill4.png" width="30" >
                             </td>
