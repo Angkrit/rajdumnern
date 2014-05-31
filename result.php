@@ -5,13 +5,13 @@ $link = connectDB();
 
 
 
-    $sql = "SELECT pc_id FROM raj_point_comment WHERE ven_id = '$ven_id' ORDER BY pc_id DESC;";
-    $result = mysql_query($sql,$link);
-    $array = mysql_fetch_assoc($result);
-
-    $pc_id = $array['pc_id']+1;
-
-    $strSQL = "";
+//    $sql = "SELECT pc_id FROM raj_point_comment WHERE ven_id = '$ven_id' ORDER BY pc_id DESC;";
+//    $result = mysql_query($sql,$link);
+//    $array = mysql_fetch_assoc($result);
+//
+//    $pc_id = $array['pc_id']+1;
+//
+//    $strSQL = "";
     $strSQL = "SELECT v.ven_id,v.ven_name,
 TRUNCATE(AVG(pc_speaking_point)/4*100,2) as speaking,
 TRUNCATE(AVG(pc_knowledge_point)/4*100,2) as knowledge,
@@ -49,7 +49,7 @@ GROUP BY ven_id";
             <div class="col-md-3">
             </div>
             <div class="col-md-1">
-                <img src="image/commentator<?php echo $value['ven_id']; ?>.jpg" width="80" >
+                <a href="view.php?id=<?php echo $value['ven_id']; ?>"><img src="image/commentator<?php echo $value['ven_id']; ?>.jpg" width="80" ></a>
             </div>
             <!-- Commentator 1
             ================================================== -->
@@ -59,7 +59,7 @@ GROUP BY ven_id";
                     <table width="100%" border="0">
                         <tr>
                             <td colspan="3" align="center">
-                                <?php echo $value['ven_name'].'%'; ?>
+                                <?php echo $value['ven_name']; ?>
                             </td>
                         </tr>
                         <tr bgcolor="#EC1C24">
@@ -106,21 +106,18 @@ GROUP BY ven_id";
                             </td>
                         </tr>
                         <tr bgcolor="#6FC8C0">
-                            <td align="center">
-                                <img src="image/skill4.png" width="30" >
-                            </td>
-                            <td>Total
+                            <td align="left" colspan="2">
+                                <img src="image/total.jpg" width="130px" >
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['total']; ?>
+                                <?php echo $value['total'].'%'; ?>
                             </td>
                         </tr>
                         <tr bgcolor="#adff2f">
-                            <td align="center">
-                                <img src="image/skill4.png" width="30" >
+                            <td align="left" colspan="2">
+                                <img src="image/ranking.jpg" width="130px" >
                             </td>
-                            <td>Ranking
-                            </td>
+
                             <td width="50" align="center">
                                 <?php
                                 if($value['total'] > 90)
