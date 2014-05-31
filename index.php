@@ -1,8 +1,26 @@
 <?php
 include "setup.php";
 
-//$link = connectDB();
-//disconnectDB($link);
+$link = connectDB();
+
+if ( isset($_POST['button']) AND $_POST['button'] == 'Submit' ) {
+
+	$ven_id = $_POST['ven_id'];
+	$pc_speaking_point = $_POST['skill1'];
+	$pc_knowledge_point = $_POST['skill2'];
+	$pc_entertainment_point = $_POST['skill3'];
+	$pc_accuracy_point = $_POST['skill4'];
+	$pc_comment = $_POST['comment'];
+	
+	$strSQL = "";
+	$strSQL = "INSERT INTO raj_point_comment ";
+	$strSQL .= "(ven_id,pc_speaking_point,pc_knowledge_point,pc_entertainment_point,pc_accuracy_point,pc_comment )";
+	$strSQL .= "VALUES ";
+	$strSQL .= "('$ven_id','$pc_speaking_point','$pc_knowledge_point','$pc_entertainment_point','$pc_accuracy_point','$pc_comment' )";
+	$objQuery = mysql_query($strSQL,$link);
+
+}
+disconnectDB($link);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,6 +45,7 @@ include "setup.php";
 		================================================== --> 
 		<div class="col-md-5">
 		<form name="form1" method="post" action="index.php" >
+		<input name="ven_id" type="hidden" size="10" value="1" />
 		<table width="100%" border="0">
 			<tr bgcolor="#EC1C24">
 				<td width="50" align="center">
@@ -35,22 +54,22 @@ include "setup.php";
 				<td>Speaking Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill1">
+					<label><input type="radio" name="skill1" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -62,22 +81,22 @@ include "setup.php";
 				<td>Soccer Knowledge
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill2">
+					<label><input type="radio" name="skill2" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -89,22 +108,22 @@ include "setup.php";
 				<td>Entertainment Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill3">
+					<label><input type="radio" name="skill3" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -116,22 +135,22 @@ include "setup.php";
 				<td>Accuracy Skill
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="4" checked>
 					<img src="image/vote1.png" width="30" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="3">
 					<img src="image/vote2.png" width="15" >
 					</label>
 				</td>
 				<td width="40" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="2">
 					<img src="image/vote3.png" width="15" >
 					</label>
 				</td>
 				<td width="50" align="center">
-					<label><input type="radio" name="skill4">
+					<label><input type="radio" name="skill4" value="1">
 					<img src="image/vote4.png" width="30" >
 					</label>
 				</td>
@@ -143,13 +162,13 @@ include "setup.php";
 			</tr>
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
-					<textarea name="kpi" id="kpi" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
+					<textarea name="comment" class="form-control" rows="4" maxlength="500" placeholder="Your Comment....." required ></textarea>
 				</td>
 			</tr>
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
 					<br><p>
-					<button type="button" class="btn btn-danger">Submit</button>
+					<input type="submit" name="button" class="btn btn-danger" value="Submit" />
 					</p>
 				</td>
 			</tr>
@@ -435,6 +454,7 @@ include "setup.php";
 			<tr bgcolor="#6FC8C0">
 				<td colspan="6" align="center">
 					<br><p>
+					
 					<button type="button" class="btn btn-danger">Submit</button>
 					</p>
 				</td>
