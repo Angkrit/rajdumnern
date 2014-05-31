@@ -12,7 +12,7 @@ $link = connectDB();
     $pc_id = $array['pc_id']+1;
 
     $strSQL = "";
-    $strSQL = "SELECT v.ven_id,v.ven_name
+    $strSQL = "SELECT v.ven_id,v.ven_name,
 TRUNCATE(AVG(pc_speaking_point)/4*100,2) as speaking,
 TRUNCATE(AVG(pc_knowledge_point)/4*100,2) as knowledge,
 TRUNCATE(AVG(pc_entertainment_point)/4*100,2) as entertainment,
@@ -58,8 +58,8 @@ GROUP BY ven_id";
                     <input name="ven_id" type="hidden" size="10" value="1" />
                     <table width="100%" border="0">
                         <tr>
-                            <td colspan="2" align="center">
-                                <?php echo $value['ven_name']; ?>
+                            <td colspan="3" align="center">
+                                <?php echo $value['ven_name'].'%'; ?>
                             </td>
                         </tr>
                         <tr bgcolor="#EC1C24">
@@ -69,7 +69,7 @@ GROUP BY ven_id";
                             <td>Speaking Skill
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['speaking']; ?>
+                                <?php echo $value['speaking'].'%'; ?>
                             </td>
 
                         </tr>
@@ -80,7 +80,7 @@ GROUP BY ven_id";
                             <td>Soccer Knowledge
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['knowledge']; ?>
+                                <?php echo $value['knowledge'].'%'; ?>
                             </td>
 
                         </tr>
@@ -91,7 +91,7 @@ GROUP BY ven_id";
                             <td>Entertainment Skill
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['entertainment']; ?>
+                                <?php echo $value['entertainment'].'%'; ?>
                             </td>
 
                         </tr>
@@ -102,7 +102,7 @@ GROUP BY ven_id";
                             <td>Accuracy Skill
                             </td>
                             <td width="50" align="center">
-                                <?php echo $value['accuracy']; ?>
+                                <?php echo $value['accuracy'].'%'; ?>
                             </td>
                         </tr>
                         <tr bgcolor="#6FC8C0">
